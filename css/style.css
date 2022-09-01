@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Mulish:wght@500;700&display=swap');
+
+.header,
+.footer {
+    background: rgba(255, 113, 67, 0.27);
+    padding: 38px 0 48px;
+}
+
+.container {
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-element {
+    display: flexbox;
+}
+
+.div-logo {
+    margin-top: 48px;
+    display: flexbox;
+}
+
+.nav li {
+    display: inline-block;
+
+}
+
+.nav li:not(:first-of-type) {
+    margin-left: 49px;
+}
+
+.nav li a {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.468947px;
+    color: #696871;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    color: #19191B;
+    transition: 300ms;
+}
+
+.button {
+    width: 212px;
+    height: 60px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.531474px;
+    cursor: pointer;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+}
+
+.b-orange {
+    background: #FF7143;
+}
+
+.b-orange:hover {
+    background: #f87e55;
+    transition: 500ms;
+}
+
+.about h1 {
+    max-width: 468px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 77px;
+    letter-spacing: -2.50105px;
+    color: #19191B;
+    margin-bottom: 30px;
+}
+
+.about p {
+    max-width: 464px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.625263px;
+    color: #696871;
+    margin-bottom: 50px;
+}
+
+.b-violet {
+    background: #5454D4;
+}
+
+.b-violet:hover {
+    background: #4141d8;
+    transition: 500ms;
+}
+
+.b-transparent {
+    border: 1px solid #5454D4;
+    background: transparent;
+    color: #5454D4;
+    margin-left: 35px;
+}
+
+.b-transparent:hover {
+    background: #e9e5e5;
+    transition: 500ms;
+}
+
+.subs {
+    margin-top: 90px;
+}
+
+
+.subs p {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 57px;
+    letter-spacing: 1.5px;
+    color: #19191B;
+}
+
+.subs input {
+    width: 302px;
+    height: 60px;
+    border: 1px solid #7087FF;
+    border-radius: 10px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.531474px;
+    padding: 0px 14px;
+    margin-right: 40px;
+    color: #000000;
+}
+
+
+.price-box {
+    width: 330px;
+    height: 441px;
+    background: #F8F8F8;
+    border-radius: 10px;
+    align-content: center;
+}
+
+
+.pricing {
+    margin-bottom: 132px;
+}
+
+
+.p1 {
+    height: 28px;
+    left: 41.97%;
+    right: 41.67%;
+    top: calc(50% - 28px/2 - 172.5px);
+    margin-top: 34px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.562737px;
+}
+
+.p2 {
+    height: 56px;
+    left: 31.21%;
+    right: 30.91%;
+    top: calc(50% - 56px/2 - 108.5px);
+    margin-top: 22px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 56px;
+    text-align: center;
+    letter-spacing: -1.03448px;
+}
+
+.p2-sub {
+    font-size: 28px;
+}
+
+.midi-box {
+    background: #FF7143;
+    box-shadow: 0px 32px 34px rgba(255, 112, 59, 0.317827);
+}
+
+.midi-color {
+    color: #ffffff;
+}
+
+.p3 {
+    height: 150px;
+    left: 32.12%;
+    right: 32.12%;
+    top: calc(50% - 150px/2 + 25.5px);
+    margin-top: 34px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: -0.531474px;
+}
+
+.midi-box p3 {
+    color: white;
+}
+
+.b-pos-price {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.b-white {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.531474px;
+    color: #5454D4;
+    background: #FFFFFF;
+    border: 1px solid #EAE9F2;
+}
+
+.b-white:hover {
+    background: #fcd3d3;
+    transition: 500ms;
+}
+
+.price-title {
+    height: 128px;
+    left: 0%;
+    right: 52.9%;
+    top: calc(50% - 128px/2 - 3px);
+    width: 700px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: -1.87579px;
+    color: #19191B;
+    margin-top: 80px;
+    margin-bottom: 102px;
+}
+
+.b-brown {
+    color: #FFFFFF;
+    background: #9F3919;
+}
+
+.b-brown:hover {
+    background: #692612;
+    transition: 500ms;
+}
+
+.img-hero {}
+
+.about {
+    margin-top: 104px;
+}
