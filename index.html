@@ -44,6 +44,7 @@
             var altitude = position.coords.altitude;
             var speed = position.coords.speed;
             pos = { lat: latitude, lng: longitude };
+            opt = { center: pos, zoom: 12 };
             writePos();
         };
 
@@ -52,12 +53,19 @@
         };
 
         navigator.geolocation.getCurrentPosition(success, error);
-        var map;
+        // var map;
+        // const opt = { center: pos, zoom: 12 };
+
         function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: pos,
-                zoom: 10
-            });
+
+            var myMap = new google.maps.Map(document.getElementById('map'), opt);
+
+            var optMarker = {
+                position: pos,
+                map: myMap,
+                title: 'You here!',
+            };
+            var marker = new google.maps.Marker(optMarker);
         };
 
 
@@ -67,4 +75,4 @@
 
 </body>
 
-</html>
+</html>11
