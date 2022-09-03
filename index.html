@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/maps.css">
-    <title>Document</title>
+    <title>Locate me`</title>
+    <!-- <script src="./script/vMap.js"></script> -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBi41eF3F5fTMEqAt3oI3JItP2-ljKgAjs&callback=initMap">
+        </script>
 </head>
 
 <body>
@@ -48,7 +52,6 @@
         };
 
         navigator.geolocation.getCurrentPosition(success, error);
-
         var map;
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
@@ -58,12 +61,10 @@
         };
 
 
-
     </script>
 
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBi41eF3F5fTMEqAt3oI3JItP2-ljKgAjs&callback=initMap">
-        </script>
+
+
 </body>
 
 </html>
