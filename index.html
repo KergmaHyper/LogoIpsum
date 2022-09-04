@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="./css/maps.css">
     <title>Locate me`</title>
     <!-- <script src="./script/vMap.js"></script> -->
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBi41eF3F5fTMEqAt3oI3JItP2-ljKgAjs&callback=initMap">
-        </script>
 </head>
 
 <body>
@@ -45,7 +42,7 @@
             var speed = position.coords.speed;
             pos = { lat: latitude, lng: longitude };
             opt = { center: pos, zoom: 12 };
-            writePos();
+
         };
 
         function error(obj) {
@@ -57,7 +54,10 @@
         // const opt = { center: pos, zoom: 12 };
 
         function initMap() {
-
+            if (pos == undefined) {
+                pos = { lat: 25.0, lng: 49.0 };
+                console.log("coordinate undefined")
+            }
             var myMap = new google.maps.Map(document.getElementById('map'), opt);
 
             var optMarker = {
@@ -66,10 +66,14 @@
                 title: 'You here!',
             };
             var marker = new google.maps.Marker(optMarker);
+            writePos();
         };
 
 
     </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBi41eF3F5fTMEqAt3oI3JItP2-ljKgAjs&callback=initMap">
+        </script>
 
 
 
