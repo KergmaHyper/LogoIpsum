@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/maps.css">
     <title>Locate me`</title>
-    <!-- <script src="./script/vMap.js"></script> -->
 </head>
 
 <body>
+
+    <div id="app">
+
+    </div>
 
     <div class="container">
         <div id="map"></div>
@@ -23,55 +26,53 @@
         </div>
         <div class="element">
             <div class="version">
-                <p>ver. 0.0409.1535</p>
+                <p>ver. 0.0409.2211</p>
             </div>
         </div>
     </div>
 
 
 
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+
+    </script>
+
 
     <script>
+        navigator.geolocation.getCurrentPosition(success, error);
 
-        function writePos(pos_) {
-            let lat = document.getElementById('lat');
-            lat.textContent = pos_.lat;
-            let lng = document.getElementById('lng');
-            lng.textContent = pos_.lng;
-        };
 
         function success(position) {
-            latitude = position.coords.latitude;
-            longitude = position.coords.longitude;
+            console.log('start success coord function');
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
             var altitude = position.coords.altitude;
             var speed = position.coords.speed;
             pos = { lat: latitude, lng: longitude };
+            console.log(pos);
             initMap();
         };
 
         function error(obj) {
             console.log("Ошибка при определении положения");
+            console.log('start error function');
+            pos = { lat: 48.93, lng: 38.5 };
+            console.log(pos);
+            initMap();
         };
 
-        // var map;
-        // const opt = { center: pos, zoom: 12 };
-        navigator.geolocation.getCurrentPosition(success, error);
 
         function initMap() {
 
-            console.log("!!!!!!!!!!!!!!!!!!!!!! pos !!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            var lLat = 48.93;
-            var lLng = 38.5;
+            console.log("start initMap");
 
-            try {
-                var { lat: lLat, lng: lLng } = pos;
-                console("!!!!! pos defined !!");
-            } catch (error) {
-                console.log("pos undefined");
 
-            }
-
-            const localPos = { lat: lLat, lng: lLng };
+            const localPos = { lat: pos.lat, lng: pos.lng };
             console.log(localPos);
 
             if (localPos.lat == 48.93 && localPos.lng == 38.5) {
@@ -93,9 +94,19 @@
         };
 
 
+        function writePos(pos_) {
+            let lat = document.getElementById('lat');
+            lat.textContent = pos_.lat;
+            let lng = document.getElementById('lng');
+            lng.textContent = pos_.lng;
+        };
+
+
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBi41eF3F5fTMEqAt3oI3JItP2-ljKgAjs">
-    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBi41eF3F5fTMEqAt3oI3JItP2-ljKgAjs"></script>
+
 
 
 
@@ -104,6 +115,3 @@
 </body>
 
 </html>
-
-
-<!-- src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBi41eF3F5fTMEqAt3oI3JItP2-ljKgAjs&callback=initMap"> -->
