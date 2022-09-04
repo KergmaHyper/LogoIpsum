@@ -23,7 +23,7 @@
         </div>
         <div class="element">
             <div class="version">
-                <p>ver. 0.0409.1452</p>
+                <p>ver. 0.0409.1500</p>
             </div>
         </div>
     </div>
@@ -75,7 +75,10 @@
 
             const localPos = { lat: lLat, lng: lLng };
             console.log(localPos);
-
+            if (localPos.lat == 48.93 && localPos.lng == 38.5) {
+                console.log("Error give coordinate");
+                alert("error coord. try again");
+            }
             opt = { center: localPos, zoom: 14 };
 
             var myMap = new google.maps.Map(document.getElementById('map'), opt);
