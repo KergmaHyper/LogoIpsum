@@ -28,20 +28,19 @@
 
     <script>
 
-        function writePos() {
+        function writePos(pos_) {
             let lat = document.getElementById('lat');
-            lat.textContent = pos.lat;
+            lat.textContent = pos_.lat;
             let lng = document.getElementById('lng');
-            lng.textContent = pos.lng;
+            lng.textContent = pos_.lng;
         };
 
         function success(position) {
-            let latitude = position.coords.latitude;
-            let longitude = position.coords.longitude;
+            latitude = position.coords.latitude;
+            longitude = position.coords.longitude;
             var altitude = position.coords.altitude;
             var speed = position.coords.speed;
             pos = { lat: latitude, lng: longitude };
-            opt = { center: pos, zoom: 12 };
 
         };
 
@@ -49,24 +48,32 @@
             console.log("Ошибка при определении положения");
         };
 
-        navigator.geolocation.getCurrentPosition(success, error);
         // var map;
         // const opt = { center: pos, zoom: 12 };
+        navigator.geolocation.getCurrentPosition(success, error);
 
         function initMap() {
-            if (pos == undefined) {
-                pos = { lat: 25.0, lng: 49.0 };
-                console.log("coordinate undefined")
-            }
+
+            console.log("!!!!!!!!!!!!!!!!!!!!!! pos !!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            console.log(latitude, longitude);
+            console.log(pos);
+            var lLat = 48.93;
+            var lLng = 38.5;
+            var { lat: lLat, lng: lLng } = pos;
+            const localPos = { lat: lLat, lng: lLng };
+            console.log(localPos);
+
+            opt = { center: localPos, zoom: 14 };
+
             var myMap = new google.maps.Map(document.getElementById('map'), opt);
 
             var optMarker = {
-                position: pos,
+                position: localPos,
                 map: myMap,
                 title: 'You here!',
             };
             var marker = new google.maps.Marker(optMarker);
-            writePos();
+            writePos(localPos);
         };
 
 
