@@ -5,13 +5,17 @@
 
 .container {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     /* margin-top: 50px; */
     /* padding: 30px; */
     background-color: rgb(3, 3, 66);
+}
+
+.element {
+    /* justify-content: space-between; */
 }
 
 #map {
@@ -21,9 +25,23 @@
 }
 
 .info {
-    font-size: 20px;
-    color: yellowgreen;
+    font-size: 120%;
+    font-style: normal;
+    color: yellow;
     background-color: rgb(24, 4, 207);
     max-width: 100%;
     height: auto;
+    width: 20%;
+    text-align: left;
+    padding: 3px 2%;
+}
+
+.version {
+    text-align: center;
+    width: 200px;
+    color: yellow;
+    background-color: rgb(24, 4, 207);
+    padding: 3px 2%;
+    font-size: 120%;
+    height: 100%;
 }
