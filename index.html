@@ -23,7 +23,7 @@
         </div>
         <div class="element">
             <div class="version">
-                <p>ver 04.09.22 14:25</p>
+                <p>ver. 0.0409.1452</p>
             </div>
         </div>
     </div>
@@ -60,11 +60,19 @@
         function initMap() {
 
             console.log("!!!!!!!!!!!!!!!!!!!!!! pos !!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            console.log(latitude, longitude);
-            console.log(pos);
+            // if (pos) console.log(pos);
+            // else console.log("pos undefined");
             var lLat = 48.93;
             var lLng = 38.5;
-            var { lat: lLat, lng: lLng } = pos;
+
+            try {
+                var { lat: lLat, lng: lLng } = pos;
+                console("!!!!! pos defined !!");
+            } catch (error) {
+                console.log("pos undefined");
+
+            }
+
             const localPos = { lat: lLat, lng: lLng };
             console.log(localPos);
 
