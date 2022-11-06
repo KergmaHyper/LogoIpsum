@@ -10,15 +10,16 @@ root.render(
     <Map mapId="map" />
 );
 
-function ticTime() {
-    const timeD = ReactDOM.createRoot(document.getElementById("timeD"));
-    timeD.render(
-        <CurrTime />
-    );
-};
-const CurrTime = () => {
-    return (<h2>current time {new Date().toLocaleTimeString()}</h2>);
-};
 
-setInterval(ticTime, 1000);
+// function ticTime() {
+//     const timeD = ReactDOM.createRoot(document.getElementById("timeD"));
+//     timeD.render(
+//         <CurrTime />
+//     );
+// };
+// const CurrTime = () => {
+//     return (<h2>current time {new Date().toLocaleTimeString()}</h2>);
+// };
+
+// setInterval(ticTime, 1000);
 

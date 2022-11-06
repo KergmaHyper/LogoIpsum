@@ -10,106 +10,30 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="module" src="./script/initMap.js"></script>
     <title>Locate me`</title>
 </head>
 
 <body>
-    <div id="timeD"></div>
+    <!-- <div id="timeD"></div> -->
     <div id="app">
     </div>
-
-    <!-- <div class="container">
+    <div class="container">
         <div id="map"></div>
-    </div> -->
 
-    <!-- <div class="container">
-        <div id="position" class=" info element">
-            <p>Latitude: <span id="lat"></span></p>
-            <p>Longtude: <span id="lng"></span></p>
-        </div>
-        <div class="element">
-            <div class="version">
-                <p>ver. 0.0409.2211</p>
-            </div>
-        </div>
-    </div> -->
+    </div>
+    <ul class="info">
+        <li id="lat"></li>
+        <li id="lng"></li>
+    </ul>
 
 
+    <!-- <script type="text/babel" src="index.jsx">    </script> -->
 
 
-
-    <script type="text/babel" src="index.jsx">    </script>
-
-
-    <script>
-        navigator.geolocation.getCurrentPosition(success, error);
-
-
-        function success(position) {
-            console.log('start success coord function');
-            var latitude = position.coords.latitude;
-            var longitude = position.coords.longitude;
-            var altitude = position.coords.altitude;
-            var speed = position.coords.speed;
-            pos = { lat: latitude, lng: longitude };
-            console.log(pos);
-            initMap();
-        };
-
-        function error(obj) {
-            console.log("Ошибка при определении положения");
-            console.log('start error function');
-            pos = { lat: 48.93, lng: 38.5 };
-            console.log(pos);
-            initMap();
-        };
-
-
-        function initMap() {
-
-            console.log("start initMap");
-
-
-            const localPos = { lat: pos.lat, lng: pos.lng };
-            console.log(localPos);
-
-            if (localPos.lat == 48.93 && localPos.lng == 38.5) {
-                console.log("Error give coordinate");
-                alert("error coord. try again");
-            }
-            opt = { center: localPos, zoom: 12 };
-
-            var myMap = new google.maps.Map(document.getElementById('map'), opt);
-            console.log(myMap);
-
-            var optMarker = {
-                position: localPos,
-                map: myMap,
-                title: 'You here!',
-            };
-            var marker = new google.maps.Marker(optMarker);
-
-
-            writePos(localPos);
-        };
-
-
-        function writePos(pos_) {
-            let lat = document.getElementById('lat');
-            lat.textContent = pos_.lat;
-            let lng = document.getElementById('lng');
-            lng.textContent = pos_.lng;
-        };
-
-
-    </script>
-
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBi41eF3F5fTMEqAt3oI3JItP2-ljKgAjs"></script>
-
-
-
-
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCR5u2NplO5FO2JMjoCMaq3LE3vG-2l0O4&callback=initMap"></script>
 
 
 </body>
