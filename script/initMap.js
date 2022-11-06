@@ -37,7 +37,7 @@ function success(position) {
         map: map,
         title: 'You here!',
     };
-    var marker = new google.maps.Marker(optMarker);
+    marker = new google.maps.Marker(optMarker);
     console.log(optMarker, marker);
 
     writePos(pos);
@@ -66,6 +66,13 @@ function placeMarkerAndPanTo(latLng, map) {
     writePos(p);
 };
 
+function moveMarker(latLng) {
+
+    p = { lat: latLng.lat(), lng: latLng.lng() };
+    console.log("p: ", p);
+    writePos(p);
+    marker.setPosition(latLng);
+}
 
 function initMap() {
     console.log("start initMap");
@@ -84,7 +91,8 @@ function initMap() {
     });
     infoWindow = new google.maps.InfoWindow();
     map.addListener("click", (e) => {
-        placeMarkerAndPanTo(e.latLng, map);
+        // placeMarkerAndPanTo(e.latLng, map);
+        moveMarker(e.latLng);
     });
 
 
