@@ -1,7 +1,7 @@
 let map;
 let infoWindow;
 let p = { lat: 0, lng: 0 };
-
+let marker;
 
 // let pos = { lat: 48.93, lng: 38.49 };
 let pos;
@@ -38,6 +38,8 @@ function success(position) {
         title: 'You here!',
     };
     var marker = new google.maps.Marker(optMarker);
+    console.log(optMarker, marker);
+
     writePos(pos);
 
 
@@ -56,6 +58,7 @@ function placeMarkerAndPanTo(latLng, map) {
         position: latLng,
         map: map,
     });
+
 
     map.panTo(latLng);
     p = { lat: latLng.lat(), lng: latLng.lng() };
