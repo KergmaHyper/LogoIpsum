@@ -288,8 +288,44 @@
     transition: 500ms;
 }
 
-.img-hero {}
 
 .about {
     margin-top: 104px;
+}
+
+
+
+
+.input {
+    margin: 3px;
+    padding: 5px;
+}
+
+.inputName {
+    width: 150px;
+    background-color: bisque;
+}
+
+.inputName:hover {
+    background-color: rgb(163, 134, 243);
+    transition: 500ms;
+}
+
+.inputAge {
+    width: 25px;
+    background-color: #5454D4;
+    color: yellow;
+    border-color: green;
+    visibility: var(--vis, hidden);
+}
+
+.inputAgeActive {
+    visibility: visible;
+}
+
+.inputActive {
+    width: 105px;
+    background-color: #5454D4;
+    color: yellow;
+    border-color: green;
 }

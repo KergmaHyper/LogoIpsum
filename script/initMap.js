@@ -1,14 +1,31 @@
 let map;
 let infoWindow;
 let marker;
-let pos;
+let pos = 0;
+let markerPosition;
 let p = {
     lat: 49,
     lng: 38,
     getCoords(ll) { this.lat = ll.lat(); this.lng = ll.lng(); }
 };
 
+function posObj(latLng) {
+    let _lat = latLng.lat();
+    let _lng = latLng.lng();
+    this.lat = function () { return _lat; };
+    this.lng = function () { return _lng; };
+}
 
+
+function createMarkerPosition(latLng) {
+    return ({
+        lat: latLng.lat(),
+        lng: latLng.lng(),
+        createMarker: function (map) {
+            return new google.maps.Marker({ position: { lat: this.lat, lng: this.lng }, map });
+        }
+    });
+}
 function writePos(pos) {
     let lat = document.getElementById('lat');
     let lng = document.getElementById('lng');
@@ -34,8 +51,17 @@ function success(position) {
         map,
         title: 'You here!',
     };
-    marker = new google.maps.Marker(optMarker);
+
+
+    //    marker = new google.maps.Marker(optMarker);
+    markerPosition = createMarkerPosition({
+        lat: function () { return pos.lat },
+        lng: () => pos.lng
+    });
+    marker = markerPosition.createMarker(map);
+
     console.log(optMarker, marker);
+    console.log("!!!!!!!!!!!!Marker position", markerPosition);
     writePos(pos);
 };
 
@@ -58,6 +84,15 @@ function moveMarker(latLng) {
     p.getCoords(latLng);
     console.log("p: ", p);
     writePos(p);
+
+    var pos = new posObj(latLng);
+    console.log(pos);
+
+    console.log(globalThis.pos);
+
+    // for (const pr in pos) {
+    //     console.log(pr, " : ", pos[pr]());
+    // }
 }
 
 function initMap() {
@@ -85,3 +120,4 @@ function initMap() {
 }
 
 window.initMap = initMap;
+window.pos = pos;

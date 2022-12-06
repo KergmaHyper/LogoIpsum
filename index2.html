@@ -2,193 +2,31 @@
 <html lang="en">
 
 <head>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P5N9R69');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="test page for lerning HTML CSS">
-    <title>LogoIpsum</title>
-    <!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
-        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+    <script src="./script/funcs.js"></script>
+
 </head>
 
 <body>
-    <!-- <header class="header">
-        <div class="container flex-container">
-            <div class="flex-element">
-                <a href="#">
-                    <img src="./img/Logo.svg" alt="logo" class="logo-top">
-                </a>
-            </div>
-            <nav class="nav flex-container nav-top">
-                <ul>
-                    <li> <a href="#">Home</a> </li>
-                    <li> <a href="#">Features</a> </li>
-                    <li> <a href="#">Pricing</a> </li>
-                    <li> <a href="#">Blog</a> </li>
-                </ul>
-
-            </nav>
-            <div class="flex-element">
-                <button class="button b-orange">Get started</button>
-            </div>
-        </div>
-    </header>
-    <section class="container about flex-container">
-        <div class="flex-element">
-            <h1>Grow your subscription business</h1>
-            <p>Outcome-centered products that reduce churn, optimize pricing, and grow your subscription business
-                end-to-end.</p>
-            <div>
-                <button class="button b-violet"> Get Started </button>
-                <button class="button b-transparent"> Try </button>
-            </div>
-        </div>
-        <div class="flex-element img-hero">
-            <img src="./img/Hero 3D.png" alt="Hero3D">
-        </div>
-    </section>
-
-    <section class="subs">
-        <div class="container flex-container">
-            <div class="flex-element">
-                <img src="./img/Image-02.png" alt="Image-02">
-            </div>
-            <div class="flex-element">
-                <p>Subscription index</p>
-                <input type="email" name="" id="" placeholder="Email">
-                <button class="button b-violet">Try</button>
-
-            </div>
-        </div>
-    </section>
-    <section class="container pricing">
-        <div>
-            <div class="price-title">
-                <p>Get the right plan for future</p>
-            </div>
-            <div class="flex-container">
-                <div class="flex-element price-box">
-                    <p class="p1">Starter</p>
-                    <p class="p2">Free</p>
-                    <div class="p3">
-                        <p> 1 Website</p>
-                        <p> 5 GB Hosting</p>
-                        <p>Limited Support</p>
-                    </div>
-                    <div class="b-pos-price">
-                        <button class="button b-white">Get Started</button>
-                    </div>
-                </div>
-                <div class="flex-element price-box midi-box">
-                    <p class="p1 midi-color">Premium</p>
-                    <p class="p2 midi-color">$29<span class="p2-sub">/month</span></p>
-                    <div class="p3 midi-color">
-                        <p> 10 Website</p>
-                        <p> 15 GB Hosting</p>
-                        <p>Premium Support</p>
-                    </div>
-                    <div class="b-pos-price">
-                        <button class="button b-brown">Get Started</button>
-                    </div>
-                </div>
-                <div class="flex-element price-box">
-                    <p class="p1">Enterprise</p>
-                    <p class="p2">$49<span class="p2-sub">/month</span></p>
-                    <div class="p3">
-                        <p> Unlimited Website</p>
-                        <p> 50 GB Hosting</p>
-                        <p>Premium Support</p>
-                    </div>
-                    <div class="b-pos-price">
-                        <button class="button b-white">Get Started</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="container flex-container">
-            <div class="flex-element">
-                <a href="#">
-                    <img src="./img/Logo.svg" alt="logo">
-                </a>
-            </div>
-            <nav class="nav flex-element nav-bottom">
-                <ul>
-                    <li> <a href="#">Support</a> </li>
-                    <li> <a href="#">Premium</a> </li>
-                    <li> <a href="#">Pricing</a> </li>
-                    <li> <a href="#">Blog</a> </li>
-                </ul>
-            </nav>
-        </div>
-    </footer> -->
-    <script>
-
-        class Point {
-            #x = 0;
-            #y = 0;
-            // constructor() { };
-            constructor(x, y) { this.#x = x; this.#y = y; }
-            moveTo(dx, dy) { this.$x = +dx; this.#y = +dy; };
-            get x() { return this.#x; };
-            get y() { return this.#y; };
-            toString() { return `POINT = {x:` + this.x + `, y:` + this.y + `}`; };
-        };
-
-
-        function openSite() {
-            let prop_site = "height=480,weight=640,left=100,top=50";
-            var winSite = window.open(site, "_blank", prop_site);
-
-        }
-
-        const B = new Point(50, 75);
-        let p = { x: B.x, y: B.y };
-        console.log(p);
-        console.log(B.toString())
-        // alert(B.toString());
-        document.write(B);
-
-        // if (confirm("Doit?")) {
-        //     let ans = prompt("Who are you?", "Alex");
-        //     document.write("<p>Ok</p><p>" + ans + " going</p>");
-        //     var site = prompt("input your favorite web site", "https://sd.ua");
-        //     document.write('<button onclick="openSite()"> Open site</button>');
-        // }
-        // else {
-        //     alert("Goodbay");
-        // }
-        // winSite.moveTo(50, 100);
-        document.write(window.navigator.userAgent);
-        console.log(window.navigator.userAgent);
-        function success(position) {
-            var latitude = position.coords.latitude;
-            var longitude = position.coords.longitude;
-            var altitude = position.coords.altitude;
-            var speed = position.coords.speed;
-
-            document.write("Широта: " + latitude + "<br/>");
-            document.write("Долгота: " + longitude + "<br/>");
-            document.write("Высота: " + altitude + "<br/>");
-            document.write("Скорость перемещения: " + speed + "<br/>");
-        };
-
-        function error(obj) {
-            document.write("Ошибка при определении положения");
-        };
-        navigator.geolocation.getCurrentPosition(success, error);
-        // setTimeout(() => winSite.close(), 5000);
-
-
-
-
-    </script>
-
-
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5N9R69" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 </body>
 
 </html>
